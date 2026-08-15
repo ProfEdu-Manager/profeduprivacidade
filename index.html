@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Política de Privacidade — ProfEdu Manager</title>
+<style>
+  :root {
+    --fundo: #ffffff;
+    --texto: #1a1a1a;
+    --suave: #555555;
+    --borda: #e0e0e0;
+    --destaque: #1a6b3c;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --fundo: #121212;
+      --texto: #e6e6e6;
+      --suave: #aaaaaa;
+      --borda: #333333;
+      --destaque: #6fce9a;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--fundo);
+    color: var(--texto);
+    font-family: -apple-system, "Segoe UI", Roboto, "Noto Sans", sans-serif;
+    line-height: 1.6;
+  }
+  main {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 2rem 1.25rem 4rem;
+  }
+  h1 {
+    font-size: 1.6rem;
+    line-height: 1.3;
+    border-bottom: 2px solid var(--destaque);
+    padding-bottom: .6rem;
+  }
+  h2 {
+    font-size: 1.15rem;
+    margin-top: 2rem;
+    color: var(--destaque);
+  }
+  .atualizacao {
+    color: var(--suave);
+    font-size: .95rem;
+  }
+  ul { padding-left: 1.4rem; }
+  li { margin-bottom: .4rem; }
+  strong { font-weight: 600; }
+  footer {
+    margin-top: 3rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--borda);
+    color: var(--suave);
+    font-size: .9rem;
+  }
+  a { color: var(--destaque); }
+</style>
+</head>
+<body>
+<main>
+
+<h1>Política de Privacidade — ProfEdu Manager</h1>
+<p class="atualizacao"><strong>Última atualização: 11 de agosto de 2026</strong></p>
+
+<h2>1. Sobre o aplicativo</h2>
+<p>O ProfEdu Manager é um aplicativo para professores criarem avaliações, imprimirem folhas de respostas e corrigirem provas automaticamente pela câmera do aparelho. O aplicativo foi desenhado para funcionar <strong>offline</strong>: a correção, as notas e todos os dados pedagógicos são processados e armazenados <strong>exclusivamente no aparelho do professor</strong>.</p>
+
+<h2>2. Papéis no tratamento de dados (LGPD)</h2>
+<ul>
+  <li><strong>O professor (usuário)</strong> é o controlador dos dados dos estudantes que ele próprio cadastra (nomes, turmas, notas). Esses dados <strong>nunca são enviados ao desenvolvedor</strong> nem a qualquer servidor: existem apenas no aparelho do professor.</li>
+  <li><strong>O desenvolvedor do aplicativo</strong> trata apenas os dados técnicos mínimos descritos na seção 5 (telemetria anônima de funcionamento).</li>
+</ul>
+
+<h2>3. Dados armazenados somente no aparelho</h2>
+<p>Os seguintes dados são criados pelo professor e ficam <strong>apenas no aparelho</strong>, em banco de dados <strong>criptografado (AES-256)</strong>, com a chave protegida pelo cofre de segurança do Android (Keystore):</p>
+<ul>
+  <li>Nomes de estudantes, turmas e organização do ano letivo;</li>
+  <li>Avaliações, gabaritos, questões digitadas e imagens anexadas às questões;</li>
+  <li>Notas, respostas lidas das folhas e relatórios de desempenho;</li>
+  <li>PDFs gerados (provas, folhas de respostas, relatórios), gravados em pasta privada do aplicativo, inacessível a outros aplicativos.</li>
+</ul>
+<p>Esses dados podem ser apagados a qualquer momento pelo professor, dentro do aplicativo ou desinstalando-o.</p>
+
+<h2>4. Câmera e fotos</h2>
+<ul>
+  <li><strong>Correção de provas (scan):</strong> a leitura é feita diretamente do fluxo da câmera, <strong>em memória</strong>. Nenhuma foto de prova é gravada como arquivo no aparelho.</li>
+  <li><strong>Importação de lista de chamada (OCR):</strong> a foto da lista é processada <strong>no próprio aparelho</strong> (reconhecimento de texto local, sem envio a servidores) e descartada após o processamento.</li>
+  <li>O aplicativo não acessa a galeria de fotos pessoal do usuário para essas funções, e nenhuma imagem capturada é transmitida para fora do aparelho.</li>
+</ul>
+
+<h2>5. Dados coletados pelo desenvolvedor (telemetria mínima)</h2>
+<p>Para monitorar a estabilidade do aplicativo, são coletados apenas dados técnicos, <strong>sem qualquer dado de estudante, nota ou conteúdo pedagógico</strong>:</p>
+<ul>
+  <li><strong>Identificador anônimo de sessão</strong> (Firebase Authentication, login anônimo): um código aleatório, sem nome, e-mail ou telefone;</li>
+  <li><strong>Registro de sessão</strong> (Firebase/Google Cloud Firestore): o identificador anônimo e a data/hora do último uso;</li>
+  <li><strong>Evento de inicialização</strong> (Firebase Analytics): registro de que o aplicativo abriu, acompanhado dos dados técnicos padrão do serviço (modelo do aparelho, versão do sistema operacional).</li>
+</ul>
+<p>Esses dados são processados pelo Google Firebase (operador), sujeitos à política de privacidade do Google. <strong>Não vendemos dados, não exibimos publicidade e não compartilhamos dados com terceiros</strong> além do processamento técnico descrito acima.</p>
+
+<h2>6. Permissões utilizadas</h2>
+<ul>
+  <li><strong>Câmera:</strong> leitura das folhas de respostas e OCR da lista de chamada;</li>
+  <li><strong>Biometria:</strong> desbloqueio local opcional do aplicativo (a biometria é verificada pelo próprio Android; o aplicativo não tem acesso à digital ou ao rosto do usuário).</li>
+</ul>
+
+<h2>7. Compartilhamento feito pelo professor</h2>
+<p>As exportações (PDF, Excel, CSV) são geradas localmente e só saem do aparelho quando o professor decide compartilhá-las. A guarda e o compartilhamento desses arquivos são de responsabilidade do professor, na condição de controlador dos dados dos seus estudantes.</p>
+
+<h2>8. Dados de crianças e adolescentes</h2>
+<p>O aplicativo é destinado a professores. O desenvolvedor <strong>não coleta</strong> dados pessoais de crianças e adolescentes; os dados de estudantes cadastrados pelo professor permanecem exclusivamente no aparelho dele, criptografados, conforme as seções 2 e 3.</p>
+
+<h2>9. Direitos do titular (art. 18 da LGPD)</h2>
+<p>Para os dados de telemetria descritos na seção 5, o titular pode solicitar confirmação de tratamento, acesso, correção ou eliminação pelo contato abaixo. Para dados de estudantes, as solicitações devem ser dirigidas ao professor responsável (controlador), que pode atendê-las diretamente no aplicativo.</p>
+
+<h2>10. Contato</h2>
+<p>Responsável pelo aplicativo e pelo tratamento da telemetria:<br>
+<strong>E-mail:</strong> <a href="mailto:profedumanager@gmail.com">profedumanager@gmail.com</a></p>
+
+<h2>11. Alterações desta política</h2>
+<p>Esta política pode ser atualizada para refletir mudanças no aplicativo. A versão vigente estará sempre disponível no endereço publicado na ficha do aplicativo na Play Store, com a data de atualização no topo.</p>
+
+<footer>ProfEdu Manager — política de privacidade.</footer>
+
+</main>
+</body>
+</html>
